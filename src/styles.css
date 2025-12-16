@@ -1,0 +1,274 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins/Poppins-ExtraLight.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+.card {
+  padding: 2em;
+  border-radius: 0.5em;
+  width: 19.625rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1.5rem 1.5rem -1.25rem hsl(212, 6%, 44%);
+}
+.card__banner {
+  height: 0.25rem;
+  width: 19.625rem;
+  border-start-start-radius: 0.5em;
+  border-start-end-radius: 0.5em;
+  position: relative;
+  top: -2em;
+  left: -2em;
+}
+.card__banner--red {
+  background-color: hsl(0, 78%, 62%);
+}
+.card__banner--cyan {
+  background-color: hsl(180, 62%, 55%);
+}
+.card__banner--orange {
+  background-color: hsl(34, 97%, 64%);
+}
+.card__banner--blue {
+  background-color: hsl(212, 86%, 64%);
+}
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 135%;
+  letter-spacing: 0;
+  color: hsl(234, 12%, 34%);
+}
+.card__description {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: hsl(212, 6%, 44%);
+}
+.card__icon {
+  height: 4rem;
+  width: 4rem;
+  align-self: flex-end;
+  margin-top: 2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.625em 2em;
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.header {
+  max-width: 33.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins";
+  margin-bottom: 4.625em;
+}
+.header__preamble {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  color: hsl(234, 12%, 34%);
+}
+.header__preamble--subtle {
+  font-weight: 200;
+  color: hsl(212, 6%, 44%);
+}
+.header__description {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 140%;
+  color: hsl(234, 12%, 34%);
+}
+
+@media screen and (max-width: 708px) {
+  .header {
+    max-width: 24.75em;
+  }
+  .header__preamble {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 708px) {
+  content {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+    justify-items: center;
+  }
+  #sup_card {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #team_card {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  #karma_card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #calc_card {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+}
+@media screen and (min-width: 1038px) {
+  content {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    justify-items: center;
+  }
+  #sup_card {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  #team_card {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #karma_card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #calc_card {
+    grid-column: 3;
+    grid-row: 1/3;
+  }
+}
+* {
+  font-family: "Poppins";
+}

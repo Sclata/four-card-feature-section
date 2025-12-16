@@ -1,0 +1,58 @@
+@use "../utils/variables";
+
+.card {
+
+    padding: 2em;
+    border-radius: 0.5em;
+    width: 19.625rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1.5rem 1.5rem -1.25rem variables.$newt_grey_lght;
+
+    &__banner {
+        height: 0.25rem;
+        width: 19.625rem;
+        border-start-start-radius: 0.5em;
+        border-start-end-radius: 0.5em;
+        position: relative;
+        top: -2em;
+        left: -2em;
+
+        &--red {
+            background-color: variables.$prmy_red;
+        }
+        &--cyan {
+            background-color: variables.$prmy_cyan;
+        }
+        &--orange {
+            background-color: variables.$prmy_orange;
+        }
+        &--blue {
+            background-color: variables.$prmy_blue;
+        }
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 135%;
+        letter-spacing: 0;
+        color: variables.$newt_grey_dark;
+    }
+
+    &__description {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 0;
+        color: variables.$newt_grey_lght;
+    }
+
+    &__icon {
+        height: 4rem;
+        width: 4rem;
+        align-self: flex-end;
+        margin-top: 2rem;
+    }
+
+}
